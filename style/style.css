@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#row-one, #row-two, #row-three, #row-four{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#row-one{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* background-color: hsl(225, 100%, 98%); */
+}
+
+#dashboard{
+    flex: 25%;
+}
+
+#media{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+#followers{
+    font-family: 'Inter', sans-serif;
+}
+#toggle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#row-two{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.up {
+    color: hsl(163, 72%, 41%);
+    font-family: 'Inter', sans-serif;
+}
+
+.down {
+    color: hsl(356, 69%, 56%);
+    font-family: 'Inter', sans-serif;
+}
+
+.updown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.updown img{
+    margin-right: 5px;
+}
+
+.total-card{
+    display: grid;
+    grid-template-rows: 1fr 1fr .5fr.1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: hsl(227, 47%, 96%);
+    border-radius: 5px;
+}
+
+.total-card:hover{
+    background-color: hsl(234, 8%, 75%);
+    cursor: pointer;
+}
+
+#faceBookTotal{
+    border-top: 5px solid hsl(208, 92%, 53%);
+}
+
+#twitterTotal{
+    border-top: 5px solid hsl(203, 89%, 53%);
+}
+
+#instagramTotal{
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%) , hsl(329, 70%, 58%));
+    background-position: top;
+    background-size: 100% 2%;
+    background-repeat: no-repeat;
+}
+
+#youtubeTotal{
+    border-top: 5px solid hsl(348, 97%, 39%);
+}
+
+
+
+
+.name{
+    font-family: 'Inter', sans-serif;
+    color: hsl(228, 12%, 44%);
+    font-size: 1em;
+}
+
+.follower-count-total{
+    font-size: 50px;
+    max-width: min-content;
+}
+
+.follower-count-total{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: hsl(230, 17%, 14%);
+    
+}
+
+.follow{
+    font-family: 'Inter', sans-serif;
+    color: hsl(228, 12%, 44%);
+    display: block;
+    width: max-content;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+
+/* #sub-row-one{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    background-color: hsl(227, 47%, 96%);
+}
+#sub-row-two{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    background-color: hsl(227, 47%, 96%);
+} */
+
+#row-four{
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.stats-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px 20px;
+    background-color: hsl(227, 47%, 96%);
+    border-radius: 5px;
+}
+
+.stats-container:hover{
+    background-color: hsl(234, 8%, 75%);
+    cursor: pointer;
+}
+
+
+.image, .percent{
+    justify-self: self-end;
+}
+
+#row-three{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: hsl(228, 12%, 44%);
+}
+
+
+
+.number{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.viewing{
+    font-family: 'Inter', sans-serif;
+    color: hsl(228, 12%, 44%);
+    font-size: 1em;
+}
+
+.percent{
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dark mode toggle */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    /* background-color: #2196F3; */
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%) , hsl(146, 68%, 55%));
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    /* background-image: linear-gradient(to right, hsl(210, 78%, 56%) , hsl(146, 68%, 55%)); */
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* dark theme */
+
+  .total-card-dark{
+    display: grid;
+    grid-template-rows: 1fr 1fr .5fr.1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: hsl(228, 28%, 20%);
+    border-radius: 5px;
+    color: white;
+}
+
+.total-card-dark:hover{
+    cursor: pointer;
+    background-color: hsl(229, 18%, 31%);
+}
+
+.total-count-dark{
+    color: white;
+}
+
+.follow-dark{
+    color: hsl(228, 34%, 66%);
+}
+
+.name-dark{
+    color: hsl(228, 34%, 66%);
+}
+
+.stats-container-dark{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px 20px;
+    background-color: hsl(228, 28%, 20%);
+    border-radius: 5px;
+}
+
+.stats-container-dark:hover{
+    cursor: pointer;
+    background-color: hsl(228, 28%, 20%);
+}
+
+.number-dark {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.viewing-dark{
+    font-family: 'Inter', sans-serif;
+    color: hsl(228, 34%, 66%);
+    font-size: 1em;
+}
+
+
+@media (max-device-width: 960px){
+    #row-four{
+        margin-bottom: 50px;
+    }
+}
